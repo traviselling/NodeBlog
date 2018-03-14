@@ -6,15 +6,24 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var multer = require('multer');
-var upload = multer({ dest: 'uploads/' })
+var upload = multer({ dest: 'uploads/' });
 var expressValidator = require('express-validator');
+var pug = require('pug');
+
 
 var mongo = require('mongodb');
-var db = require('monk')('localhost/nodeblog');
+var db = require('monk')('127.0.0.1/scApp');
 
 var routes = require('./routes/index');
 var posts = require('./routes/posts');
 var categories = require('./routes/categories');
+var apps = require('./routes/apps');
+var services = require('./routes/services');
+var about = require('./routes/about');
+var contact = require('./routes/contact');
+var test = require('./routes/test');
+var blog = require('./routes/blog/blog');
+
 
 var app = express();
 
@@ -27,7 +36,7 @@ app.locals.truncateText = function(text, length){
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -79,6 +88,15 @@ app.use(function(req,res,next){
 app.use('/', routes);
 app.use('/posts', posts);
 app.use('/categories', categories);
+app.use('/apps',apps);
+app.use('/services',services);
+app.use('/about',about);
+app.use('/contact',contact);
+app.use('/test', test);
+app.use('/blog', blog);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

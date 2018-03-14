@@ -1,0 +1,53 @@
+extends blogLayout
+
+block content
+	.underLogoCircle
+		.logo
+			img(src='/images/blog/logo.png', alt='')
+
+
+	#nav
+		ul
+			li
+				a(href='/blog')
+					img(src='/images/blog/home.png')  
+			|                   
+			li
+				a(href='/blog/contact') 
+					img(src='/images/blog/contact.png')  
+			|                   
+			li
+				a(href='/blog/about') 
+					img(src='/images/blog/about.png')
+	// end nav
+	#mainWindow.col-md-12
+		h1=title
+		.addFormContainer
+			ul.errors
+				if errors
+					each error, i in errors
+						li.alert.alert-danger #{error.msg}
+			form(method='post', action='/blog/add', enctype="multipart/form-data")
+				.form-group
+					label Title:
+					input.form-control(name='title', type='text')
+				.form-group
+					label Category
+					select.form-control(name='category')
+						each category, i in categories
+							option(value='#{category.name}') #{category.name}
+				.form-group
+					label Body
+					textarea.form-control(name='body', id='body')
+				.form-group
+					label Main Image:
+					input.form-control(name='mainimage', type='file')
+				.form-group
+					label Author:
+					select.form-control(name='author')
+						option(value='Travis Elling') Travis Elling
+						option(value='John Doe') John Doe
+				input.btn.btn-default(name='submit',type='submit',value='Save')
+				script(src='/ckeditor/ckeditor.js')
+				script
+					| CKEDITOR.replace('body');

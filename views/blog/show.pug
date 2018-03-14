@@ -1,0 +1,34 @@
+extends postLayout
+
+block content
+	.underLogoCircle
+		.logo
+			img(src='/images/blog/logo.png', alt='')
+
+
+	#nav
+		ul
+			li
+				a(href='/blog')
+					img(src='/images/blog/home.png')  
+			|                   
+			li
+				a(href='/blog/contact') 
+					img(src='/images/blog/contact.png')  
+			|                   
+			li
+				a(href='/blog/about') 
+					img(src='/images/blog/about.png')
+	// end nav
+	#mainWindow.col-md-12
+		p.heading=post.title
+		p.postAuthor by #{post.author}
+		.postDate on #{moment(post.date).format("MM-DD-YYYY")}
+		.postContainer
+			p.postBody #{post.body}
+		.row.pictureContainer
+			.col-md-12
+				img.mainImg(src='/images/' + post.mainimage)
+		.placeAboutContainer
+			p.placeAboutTitle About This Place...
+			p.placeAboutText This was an amazing place to visit. It was full of mountains and snow and all kinds of dark and dreary stuff to make you feel all great inside. I recommend coming here if you would like to freeze and not feel your face for the next 2 weeks.

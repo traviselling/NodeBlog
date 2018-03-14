@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .logo
+    img(src='images/LogoGlasses150.png', alt='')
+  // end logo
+  #nav.col-md-3
+    ul
+      li
+        a(href='/') HOME
+        |                       
+        img(src='images/home.png', alt='')
+      |                   
+      li
+        a(href='/apps') APPS
+        |                       
+        img(src='images/apps.png', alt='')
+      |                   
+      li
+        a(href='/services') SERVICES
+        |                       
+        img(src='images/services.png', alt='')
+      |                   
+      li
+        a(href='/contact') CONTACT
+        |                       
+        img(src='images/contact.png', alt='')
+  // end nav
+  #mainWindow.col-md-9
+    #aboutWindow
+      div
+        h2 A LITTLE ABOUT US
+      |                     
+      .aboutSectionText
+        p
+          | Smarty Cat Designs is a dedicated javascript development company. We develop applications for the web , desktop and mobile environments. We have been serving customers since 2013. We also undertake other business needs such as brand designs and static websites. 

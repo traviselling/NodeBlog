@@ -1,0 +1,24 @@
+extends blogLayout
+
+block content
+  .underLogoCircle
+    .logo
+      img(src='../images/blog/logo.png', alt='')                
+  #nav
+    ul
+      li
+        a(href='/blog')
+          img(src='../images/blog/home.png')  
+      |                   
+      li
+        a(href='/blog/contact') 
+          img(src='../images/blog/contact.png')  
+      |                   
+      li
+        a(href='/blog/about') 
+          img(src='../images/blog/about.png')
+  // end nav
+  #mainWindow.col-md-12
+    .aboutWindow
+      h2 about me
+      p This is just a brief overview about who I am , but then you could just get to know me by reading my blog.   

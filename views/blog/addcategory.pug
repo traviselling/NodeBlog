@@ -1,0 +1,31 @@
+extends blogLayout
+
+block content
+	.underLogoCircle
+		.logo
+			img(src='../images/blog/logo.png', alt='')                
+	#nav
+		ul
+			li
+				a(href='/blog')
+					img(src='../images/blog/home.png')  
+			|                   
+			li
+				a(href='/blog/contact') 
+					img(src='../images/blog/contact.png')  
+			|                   
+			li
+				a(href='/blog/about') 
+					img(src='../images/blog/about.png')
+	// end nav
+	#mainWindow.col-md-12
+		h1=title
+		ul.errors
+			if errors
+				each error, i in errors
+					li.alert.alert-danger #{error.msg}
+		form(method='post', action='/blog/categories/add')
+			.form-group
+				label Name:
+				input.form-control(name='name', type='text')
+			input.btn.btn-default(name='submit',type='submit',value='Save')

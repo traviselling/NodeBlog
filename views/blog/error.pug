@@ -1,0 +1,26 @@
+extends blogLayout
+
+block content
+  .underLogoCircle
+    .logo
+      img(src='/images/blog/logo.png', alt='')
+        
+        
+  #nav
+    ul
+      li
+        a(href='/blog')
+          img(src='/images/blog/home.png')  
+      |                   
+      li
+        a(href='/blog/contact') 
+          img(src='images/blog/contact.png')  
+      |                   
+      li
+        a(href='/blog/about') 
+          img(src='/images/blog/about.png')
+  // end nav
+  #mainWindow.col-md-12
+    h1= message
+    h2= error.status
+    pre #{error.stack}

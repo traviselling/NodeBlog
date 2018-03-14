@@ -1,0 +1,68 @@
+extends layout
+
+block content
+  .logo
+    img(src='images/LogoGlasses150.png', alt='')
+  // end logo
+  #nav.col-md-3
+    ul
+      li
+        a(href='/') HOME
+        |                       
+        img(src='images/home.png', alt='')
+      |                   
+      li
+        a(href='/apps') APPS
+        |                       
+        img(src='images/apps.png', alt='')
+      |                   
+      li
+        a(href='/about') ABOUT
+        |                       
+        img(src='images/about.png', alt='')
+      |                   
+      li
+        a(href='/contact') CONTACT
+        |                       
+        img(src='images/contact.png', alt='')
+  // end nav
+  #mainWindow.col-md-9
+    #serviceWindow
+      h2 SERVICES WE PROVIDE
+      |                     
+      .col-md-4.serviceBox
+        h3 CUSTOM WEBSITES
+        |                         
+        p.serviceText
+          | Websites tailor made to your unique business. Websites not built on Wordpress.
+      |                     
+      .col-md-4.serviceBox
+        h3 SINGLE PAGE APPS
+        |                         
+        p.serviceText
+          | Web Applications built on Angular or React to bring you into the web 2.0
+      |                     
+      .col-md-4.serviceBox
+        h3 DESKTOP APPS
+        |                         
+        p.serviceText
+          | We develop Applications for Desktop and Mobile users.
+      |                     
+      .col-md-4.serviceBox
+        h3 PLUG-INS
+        |                         
+        p.serviceText
+          | If you need to have a bit more functionality on your current website then we can develop that for you.
+      |                     
+      .col-md-4.serviceBox
+        h3 WP CONVERSION
+        |                         
+        p.serviceText
+          | If you are tired of all of the complications from owning a Wordpress website then why not switch to Nodejs?
+      |                     
+      .col-md-4.serviceBox
+        h3 TROUBLESHOOTING
+        |                         
+        p.serviceText
+          | If you arent ready to change your Wordpress website then maybe you just need to have a few issues fixed.
+        

@@ -1,0 +1,46 @@
+extends layout
+
+block content
+	.logo
+		img(src='/images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav.col-md-3
+		.logged
+			p 
+			| logged in as 
+			span.userName 
+		ul
+			li
+				a(href='/apps') APPS
+				|                       
+				img(src='/images/apps.png', alt='')
+			|                   
+			li
+				a(href='/services') SERVICES
+				|                       
+				img(src='/images/services.png', alt='')
+			|                   
+			li
+				a(href='/about') ABOUT
+				|                       
+				img(src='/images/about.png', alt='')
+			|                   
+			li
+				a(href='/contact') CONTACT
+				|                       
+				img(src='/images/contact.png', alt='')
+			|
+			li
+				a(href='/users/login') LOGIN
+				|                       
+	// end nav
+	#mainWindow.col-md-9
+		.singlePost
+			h1.postPageTitle #{post.title}
+			p.meta Posted in 
+				a(href='/categories/show/' + post.category) #{post.category} by #{post.author} on #{moment(post.date).format("MM-DD-YYYY")}
+				.mainImgPage
+					img.image-responsive(src='/images/' + post.mainimage)
+			.postBodyContainer
+				.postPageBody
+					!=post.body

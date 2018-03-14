@@ -1,0 +1,38 @@
+extends blogLayout
+
+block content
+  .underLogoCircle
+    .logo
+      img(src='images/blog/logo.png', alt='')
+        
+        
+  #nav
+    ul
+      li
+        a(href='/blog')
+          img(src='images/blog/home.png')  
+      |                   
+      li
+        a(href='/blog/contact') 
+          img(src='images/blog/contact.png')  
+      |                   
+      li
+        a(href='/blog/about') 
+          img(src='images/blog/about.png')
+  // end nav
+  #mainWindow.col-md-12
+    p.heading Developer - Pondererer - Different
+    .articleList
+      if posts
+       each post, i in posts
+        .articleListItem
+          p.postTitle
+           a(href='blog/show/' + post._id)
+            =post.title
+          .authorSub #{post.author}
+          .postDate #{moment(post.date).format("MM-DD-YYYY")}
+          .postText
+            !=truncateText(post.body,200)
+          a.more.myReadMoreBtn(href='blog/show/' + post._id) Read More
+    
+        

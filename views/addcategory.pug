@@ -1,0 +1,47 @@
+extends layout
+
+block content
+	.logo
+		img(src='images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav.col-md-3
+		.logged
+			p 
+			| logged in as 
+			span.userName 
+		ul
+			li
+				a(href='/apps') APPS
+				|                       
+				img(src='images/apps.png', alt='')
+			|                   
+			li
+				a(href='/services') SERVICES
+				|                       
+				img(src='images/services.png', alt='')
+			|                   
+			li
+				a(href='/about') ABOUT
+				|                       
+				img(src='images/about.png', alt='')
+			|                   
+			li
+				a(href='/contact') CONTACT
+				|                       
+				img(src='images/contact.png', alt='')
+			|
+			li
+				a(href='/users/login') LOGIN
+				|                       
+	// end nav
+	#mainWindow.col-md-9
+		h1=title
+		ul.errors
+			if errors
+				each error, i in errors
+					li.alert.alert-danger #{error.msg}
+		form(method='post', action='/categories/add')
+			.form-group
+				label Name:
+				input.form-control(name='name', type='text')
+			input.btn.btn-default(name='submit',type='submit',value='Save')
