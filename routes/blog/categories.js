@@ -4,7 +4,7 @@ var mongo = require('mongodb');
 var db = require('monk')('localhost/scApp');
 
 router.get('/show/:category', function(req, res, next) {
-	var posts = db.get('postsMain');
+	var posts = db.get('posts');
 
 	posts.find({category: req.params.category},{},function(err, posts){
 		res.render('index',{

@@ -6,7 +6,7 @@ var mongo = require('mongodb');
 var db = require('monk')('localhost/scApp');
 
 router.get('/show/:id', function(req, res, next) {
-	var posts = db.get('postsMain');
+	var posts = db.get('posts');
 
 	posts.findById(req.params.id,function(err, post){
 		res.render('show',{
@@ -92,7 +92,7 @@ router.post('/addcomment', function(req, res, next) {
 	var errors = req.validationErrors();
 
 	if(errors){
-		var posts = db.get('postsMain');
+		var posts = db.get('posts');
 		posts.findById(postid, function(err, post){
 			res.render('show',{
 				"errors": errors,
