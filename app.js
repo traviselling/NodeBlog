@@ -23,6 +23,8 @@ var about = require('./routes/about');
 var contact = require('./routes/contact');
 var test = require('./routes/test');
 var blog = require('./routes/blog/blog');
+var admin = require('./routes/Admin/index');
+var textEditor = require('./routes/TextEditor/index');
 
 
 var app = express();
@@ -94,6 +96,8 @@ app.use('/about',about);
 app.use('/contact',contact);
 app.use('/test', test);
 app.use('/blog', blog);
+app.use('/admin', admin);
+app.use('/texteditor',textEditor);
 
 
 

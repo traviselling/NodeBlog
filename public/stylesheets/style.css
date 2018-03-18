@@ -57,6 +57,7 @@ h3{
 
 }
 #nav {
+    width:8%;
     height: 795px;
     min-height: 100%;
     /*background-color:rgba(255,140,0, 0.5);*/
@@ -65,11 +66,13 @@ h3{
     padding-top: 20px;
     padding-left: 30px;
     padding-right:30px;
+    position: fixed;
+    z-index: 1;
 
 }
 .logo{
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top:2%;
   left:1%;
 }
@@ -83,8 +86,8 @@ h3{
   margin-left: 1%;
 }
 #nav ul{
-  margin-top: 50%;
-
+  position:relative;
+  top:150px;
 }
 #nav ul li{
   margin-bottom: 20%;
@@ -92,16 +95,15 @@ h3{
 }
 #nav li{
   list-style:none;
-  margin-top:10%;
+  margin-bottom:10%;
   margin-right: 20px;
   letter-spacing: .1em;
-  border-top: 1px solid rgba(	241, 195, 126, .1);
-
   padding-top: 30px;
 }
 #nav li img{
   height:25px;
   float: right;
+  display: none;
 }
 #nav li a{
   text-decoration: none;
@@ -110,7 +112,10 @@ h3{
   font-size: 1.8rem;
   font-weight: 100;
   color:#F1c37e;
-
+  margin-bottom: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid rgba(241, 195, 126, .1);
 }
 #nav li a:hover{
   color:white;
@@ -121,6 +126,7 @@ h3{
     min-height: 100vh;
     text-align: center;
     padding-top: 20%;
+
 }
 /*Blog Style*/
 #postWindow{
@@ -133,6 +139,7 @@ h3{
   height:300px;
   margin:20px;
   display: inline-block;
+  background-color: rbga(0, 0, 0, 0.5);
 }
 .postImgHeader{
   height:100px;
@@ -171,7 +178,7 @@ h3{
   top:10%;
 }
 .postPageBody{
-  font-family: "Open Sans Condensed",sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2rem;
   text-align: justify;
 }
@@ -183,7 +190,7 @@ h3{
 }
 .postAuthor{
   font-size: 1rem;
-  font-family: "Open Sans Condensed",sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   position: relative;
   float:right;
   margin-left: 10px;
@@ -202,7 +209,7 @@ h3{
 }
 .postDate{
   font-size: 1rem;
-  font-family: "Open Sans Condensed",sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   float: right;
 }
 .postText {
@@ -210,7 +217,7 @@ h3{
   padding-top: 10px;
   clear: both;
   font-size: 1.5rem;
-  font-family: 'Open Sans Condensed',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   text-align: justify;
 }
 
@@ -227,7 +234,7 @@ h3{
     margin-top: 10px;
 }
 .postText a{
-font-family: "Open Sans Condensed", cursive;
+font-family: 'Open Sans Condensed', sans-serif;
 text-decoration: none;
 color:whitesmoke;
 
@@ -265,6 +272,10 @@ text-align: center;
 #contactWindow{
   overflow: hidden;
 }
+#appWindow{
+  padding-left:10%;
+  padding-right:10%;
+}
 .appDisplay1{
   height: 150px;
   width :200px;
@@ -279,8 +290,8 @@ text-align: center;
   width :200px;
   display: inline-block;
   border: 2px solid #f1c37e;
-  background-image: url("../images/eCommerceThumb.jpg");
-  background-position: center;
+  background-image: url("../images/screenshotTextEditor.png");
+  /* background-position: center; */
   padding:0;
 }
 .appDisplay3{
@@ -293,7 +304,9 @@ text-align: center;
   padding:0;
 }
 .appCaption{
-  color:white;
+  color:#FFF;
+  font-size: 1.4rem;
+  font-family: "Open Sans",sans-serif;
 }
 .infoSection, .aboutSection{
     margin-top: 5%;
@@ -311,6 +324,10 @@ text-align: center;
   text-align: justify;
 }
 /* About Section */
+#aboutWindow{
+  padding-left: 12%;
+  padding-right:12%;
+}
 .aboutSection{
   padding-left:10%;
   padding-right:10%;
@@ -326,22 +343,39 @@ letter-spacing: .1em;
   padding-top:10%;
   border-top: 3px solid #F1c37E;
   text-align: justify;
-  font-family: 'Open Sans Condensed',sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 
 }
 /* Services */
+#serviceWindow{
+  padding-left:8%;
+}
 .serviceBox{
   height: 200px;
   width :300px;
   display: inline-block;
-  border: 1px solid white;
+  border: 1px solid #F1c37E;
   margin:1%;
 }
 .serviceText{
   line-height: 27px;
   font-size: 1.2em;
   font-family: 'Open Sans Condensed', sans-serif;
-  letter-spacing: .2rem;
+  /* letter-spacing: .1rem; */
+  text-align: justify;
+
+}
+.serviceBox h3{
+  border-bottom: 1px solid #F1c37E;
+  padding-bottom: 6%;
+}
+.serviceWindow h2{
+  margin-left: -20px;
+}
+/*Posts*/
+#postWindow{
+  padding-left: 12%;
+  padding-right: 12%;
 }
 /* Contact */
 form{
@@ -355,6 +389,7 @@ form{
 label{
   color:white;
   float: left;
+  font-size: 1.5rem;
 }
 
 .contactWrapper{
@@ -364,7 +399,9 @@ label{
   overflow: hidden;
 }
 .formWrapper{
+  width:75%;
   margin-top: 10%;
+  margin-left: 15%;
   border:1px solid white;
   position: relative;
   padding-bottom:3%;
@@ -399,6 +436,10 @@ textarea{
   background:transparent;
   border:1px solid white;
 }
+.single{
+  padding-left: 9%;
+}
+
 .myBtn{
   background-color: #FFB347;
   color: whitesmoke;

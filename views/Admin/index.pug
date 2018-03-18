@@ -1,10 +1,11 @@
-extends layout
+extends adminLayout
 
 block content
+
   .logo
     img(src='images/LogoGlasses150.png', alt='')
   // end logo
-  #nav
+  #nav.col-md-3
     ul
       li
         a(href='/') HOME
@@ -26,11 +27,11 @@ block content
         |                       
         img(src='images/contact.png', alt='')
   // end nav
-  #mainWindow.col-md-12
+  #mainWindow.col-md-9
     #aboutWindow
       div
-        h2 about us
+        h2 admin page
       |                     
       .adminSectionText
-        p.aboutSectionText
-          | Smarty Cat Designs is a dedicated javascript development company. We develop applications for the web , desktop and mobile environments. We have been serving customers since 2013. We also undertake other business needs such as brand designs and static websites.
+        p
+          | Smarty Cat Designs Admin

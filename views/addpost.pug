@@ -4,7 +4,7 @@ block content
 	.logo
 		img(src='/images/LogoGlasses150.png', alt='')
 	// end logo
-	#nav.col-md-3
+	#nav
 		.logged
 			p 
 			| logged in as 
@@ -34,7 +34,7 @@ block content
 				a(href='/users/login') LOGIN
 				|                       
 	// end nav
-	#mainWindow.col-md-9.addForm
+	#mainWindow.col-md-12.addForm
 		h1=title
 		ul.errors
 			if errors

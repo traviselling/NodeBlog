@@ -1,0 +1,12 @@
+body{
+  background-color: #4d4d4d;
+  color:#F1c37E;
+}
+#nav ul{
+  display:none;
+}
+.logo img{
+  height:75px;
+  margin-left:20px;
+  margin-top:20px;
+}

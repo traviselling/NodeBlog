@@ -1,0 +1,57 @@
+extends textEditorLayout
+
+block content
+
+	.logo
+		img(src='images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav
+		ul
+			li
+				a(href='/') HOME  
+			li
+				a(href='/apps') APPS    
+			li
+				a(href='/services') SERVICES                   
+			li
+				a(href='/contact') CONTACT
+	// end nav
+	#mainWindow.row
+		#previewWindow.col-md-6
+			div
+				h2 preview                     
+		#editorWindow.col-md-6
+			div.editorTop
+				h2 editor 
+				div.row.editorHeader
+					div.col-md-4.text
+						label title
+						input(name='title' type='text' value='')
+						select.form-control(name='text')
+							option(value='text') text
+							option(value='bold') bold
+							option(value='italics') italics
+							option(value='underline') underline
+					div.col-md-4.images
+						label category
+						input(name='category' type='text' value='')
+						select.form-control(name='image')
+							option(value='image') image
+							option(value='small') small
+							option(value='medium') medium
+							option(value='full width') full width 
+					div.col-md-4.structure
+						label tags
+						input(name='tags' value='' type='text')
+						select.form-control(name='structure')
+							option(value='structure') structure
+							option(value='1') 1 column
+							option(value='2') 2 columns
+							option(value='3') 3 columns
+				div.row.editorBodyContainer
+					div.col-md-12.editorBody 
+						textarea(name='textArea' class='textArea')
+				div.row.editorFooter
+					div.col-md-6.editorFooterLeft
+						div.btn.myBtn.pull-left submit
+					div.col-md-6.editorFooterRight

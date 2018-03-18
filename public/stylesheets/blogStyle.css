@@ -190,8 +190,8 @@ background: linear-gradient(to bottom, #dcdcdc 0%, #f2f2f2 51%, #dcdcdc 100%); /
   border: 1px solid gray;
   clear:both;
   float: right;
-  margin-right: 250px;
-  margin-left: -250px;
+  margin-right: 110px;
+  margin-left: -110px;
   /*margin-top: 20px;*/
   margin-bottom: -20px
 
