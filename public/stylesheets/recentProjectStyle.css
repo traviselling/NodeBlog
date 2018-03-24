@@ -1,0 +1,52 @@
+.displayBox{
+  height: 600px;
+  width:290px;
+  border:0.5px solid #f1c37e;
+  margin:10px;
+  overflow:hidden;
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+.displayBoxSmall{
+  margin-left:100px;
+  margin-bottom: 20px;
+  height:290px;
+  width:290px;
+  border:1px solid #F1c37e;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius:3px;
+}
+
+.displayBoxHeader{
+  border-bottom:#f1c37e;
+}
+#mainWindow{
+  padding:20px;
+}
+.recentProjectContainer{
+  display: inline-block;
+}
+.recentProjectContainer h2{
+  margin-bottom:40px;
+}
+.displayBoxInfo{
+  padding-top:80px;
+}
+.displayBoxInfo p{
+margin-top: 20px;
+text-align: justify;
+}
+.divider{
+  height: 4px;
+  background-color: #F1c37e;
+}
+.golfAnimal img{
+  height: 300px;
+}
+.yourMajesty img{
+  width:290px;
+}
+.webDisplay img{
+  width:300px;
+}

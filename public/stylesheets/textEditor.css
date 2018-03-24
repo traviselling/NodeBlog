@@ -134,11 +134,12 @@ h3{
 }
 .textArea{
   margin-top: 20px;
-  height:380px;
+  height:400px;
   width:720px;
   background-color: rgba(0, 0, 0, 0.1);
   border: .5px solid #F1c37e;
   border-radius: 3px;
+  display: inline-block;
 }
 label{
   font-size: 1.5rem;
@@ -152,15 +153,69 @@ label{
 .myBtn{
   background-color: rgba(0,0,0,0.1);
   border:1px solid #F1c37E;
-  margin-left:0px;
+  margin-left:15px;
+  margin-bottom: 10px;
   color:#f1c37e;
+  width: 300px;
 }
-#previewWindow{
-  text-align:center;
+.myBtn:hover,.myBtn:focus{
+  background-color: rgba(0,0,0,0.2);
+  color:#fff;
 }
 
 .editorTop h2, #previewWindow h2{
   padding: 10px;
   background-color: rgba(0,0,0,0.1);
   border-radius: 3px;
+}
+
+.fileInput{
+
+  width:300px;
+  margin-bottom: 10px;
+}
+.previewBtn{
+  float: right;
+  margin-bottom: 10px;
+}
+
+.actionBtn{
+  margin-top:10px;
+}
+.editorBody{
+  text-align: center;
+}
+#editorBody{
+  height:280px;
+}
+
+/*Preview Window Style*/
+#previewWindow{
+  text-align:center;
+  padding-left:115px;
+  padding-right:15px;
+}
+
+.previewText{
+  text-align: justify;
+  margin-top: 10px;
+  margin-left:10px;
+  width: 590px;
+}
+.previewTitle{
+  color:#fff;
+  font-family: "Alfa Slab One",cursive;
+}
+.authorSpan{
+  color:#FFF;
+}
+.previewCategory{
+  font-style: italic;
+  color:#fff;
+  float: right;
+}
+.divider{
+  height:2px;
+  background-color: #F1c37e;
+  clear:both;
 }

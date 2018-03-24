@@ -476,7 +476,13 @@ ul.error li{
   list-style: none;
   padding:10px;
 }
-
+.subTitleThanks{
+  margin-left:20px;
+}
+#name,#from{
+  color:#f1c37e;
+  font-size: 1.5rem;
+}
 
 @media (min-width:320px) and (max-width:767px) {
   body{

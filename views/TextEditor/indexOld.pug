@@ -1,0 +1,49 @@
+extends textEditorLayout
+
+block content
+
+	.logo
+		img(src='images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav
+		ul
+			li
+				a(href='/') HOME  
+			li
+				a(href='/apps') APPS    
+			li
+				a(href='/services') SERVICES                   
+			li
+				a(href='/contact') CONTACT
+	// end nav
+	#mainWindow.row
+		#previewWindow.col-md-6
+			h2 preview                     
+		#editorWindow.col-md-6
+			div.editorTop
+				h2 editor 
+				div.row.editorHeader
+					form(action='', method='POST', role='form')
+						div.col-md-6.text
+							.form-group
+								label(for='title') title
+								|                                         
+								input.form-control(type='text', id='title', name='title', placeholder='')
+								|                                         
+								label(for='category') category
+								|                                         
+								input.form-control(type='text', id='category', name='category', placeholder='')
+								|
+								div.row.editorBodyContainer
+									div.col-md-12.editorBody
+										label content
+										|
+										textarea(name='body' class='textArea' enctype='multipart/form-data' value='body')
+								div.row.editorFooter
+									div.col-md-6.editorFooterLeft
+										//- input.btn.myBtn.pull-left(name='submit',type='submit',value='PUBLISH') 
+										button.btn.myBtn(type='button' id='previewBtn') PREVIEW
+										button.btn.myBtn(type='submit') PUBLISH
+									div.col-md-6.editorFooterRight
+										input(type='file', name='mainimage', class='fileInput btn myBtn')
+										a.btn.myBtn(type='button' id='actionBtn' href='/texteditor/action') ACTION

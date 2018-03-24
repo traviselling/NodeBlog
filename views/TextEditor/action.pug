@@ -1,0 +1,23 @@
+extends textEditorLayout
+
+block content
+
+	.logo
+		img(src='../images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav
+		ul
+			li
+				a(href='/') HOME  
+			li
+				a(href='/apps') APPS    
+			li
+				a(href='/services') SERVICES                   
+			li
+				a(href='/contact') CONTACT
+	// end nav
+	#mainWindow.container
+		ul
+			each thing in things
+				li=thing.title
+					p=thing.body

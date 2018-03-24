@@ -10,6 +10,8 @@ var upload = multer({ dest: 'uploads/' });
 var expressValidator = require('express-validator');
 var pug = require('pug');
 
+var nodemailer = require('nodemailer');
+
 
 var mongo = require('mongodb');
 var db = require('monk')('127.0.0.1/scApp');
@@ -25,6 +27,7 @@ var test = require('./routes/test');
 var blog = require('./routes/blog/blog');
 var admin = require('./routes/Admin/index');
 var textEditor = require('./routes/TextEditor/index');
+var recentProjects = require('./routes/RecentProjects/index');
 
 
 var app = express();
@@ -44,7 +47,7 @@ app.set('view engine', 'pug');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -74,6 +77,7 @@ app.use(expressValidator({
 }));
 
 
+
 // Connect-Flash
 app.use(require('connect-flash')());
 app.use(function (req, res, next) {
@@ -98,8 +102,58 @@ app.use('/test', test);
 app.use('/blog', blog);
 app.use('/admin', admin);
 app.use('/texteditor',textEditor);
+app.use('/recentprojects', recentProjects);
 
+// Node Mailer
 
+app.post('/contact', function (req, res) {
+  var mailOpts, smtpTrans;
+  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+  smtpTrans = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+          user: "smartycatdesigns@gmail.com",
+          pass: "matraca1223"
+      }
+  });
+  //Mail options
+  mailOpts = {
+      from: "Smarty Cat Admin", //grab form data from the request body object
+      to: 'twfljeb@gmail.com',
+      subject: 'Website contact form',
+      html: "<p>Name: " + req.body.name +
+      "</p> <p>Email Address: " + req.body.from +
+      "</p><p>The Dialogue: " + req.body.body + "</p>"
+  };
+  mailOptsRelay = {
+    from: "Smarty Cat Admin",
+    to: req.body.from,
+    subject:"Inquiry Received",
+    html: "Thank you for contacting us at http://smartycatdesigns.com:3000. We will be answering your question shortly. Until then please have a look around our site and see what else interests you."
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+      //Email not sent
+      if (error) {
+          console.log("The Mail Did Not Send!!!");
+      }
+      //Yay!! Email sent
+      else {
+          console.log("Mail Sent!!!");
+          res.render('thankyou');
+      }
+  });
+  smtpTrans.sendMail(mailOptsRelay, function (error, response) {
+      //Email not sent
+      if (error) {
+          console.log("The Mail Did Not Send!!!");
+      }
+      //Yay!! Email sent
+      else {
+          console.log(" Relay Mail Sent!!!");
+
+      }
+  });
+});
 
 
 // catch 404 and forward to error handler

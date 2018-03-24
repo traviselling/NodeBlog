@@ -1,0 +1,58 @@
+extends recentProjectLayout
+
+block content
+	.logo
+		img(src='images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav
+		.logged
+			p 
+			| logged in as 
+			span.userName 
+		ul
+			li
+				a(href='/apps') APPS
+				|                       
+				img(src='images/apps.png', alt='')
+			|                   
+			li
+				a(href='/services') SERVICES
+				|                       
+				img(src='images/services.png', alt='')
+			|                   
+			li
+				a(href='/about') ABOUT
+				|                       
+				img(src='images/about.png', alt='')
+			|                   
+			li
+				a(href='/contact') CONTACT
+				|                       
+				img(src='images/contact.png', alt='')
+			|
+			li
+				a(href='/users/login') LOGIN
+				|                       
+	// end nav
+	#mainWindow.col-md-12
+		.recentProjectContainer.container
+			h2 recent projects
+			section.row
+				div.col-md-4.displayColumn
+					div.displayBoxSmall.golfAnimal
+						img(src='images/RecentProjects/golfAnimalDetailed.png')
+					div.displayBoxSmall.yourMajesty
+						img(src='images/RecentProjects/your-majesty@2x-100.jpg')
+				div.col-md-4.displayBoxInfo
+					h3 golf animal
+					.divider
+					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
+					h3 twfljeb blog
+					.divider
+					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
+					h3 your majesty
+					.divider
+					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
+				div.col-md-4.displayColumn
+					div.displayBox.webDisplay
+						img(src='images/RecentProjects/blogPic.png')

@@ -32,19 +32,19 @@ block content
       |                         
       .formWrapper.row
         .col-md-6
-          form(action='', method='POST', role='form')
+          form(action='/contact', method='POST', role='form')
             .form-group
-              label(for='') Name / Company
+              label(for='name') Name / Company
               |                                         
-              input.form-control(type='text', id='', placeholder='')
+              input.form-control(type='text', id='name', name='name', placeholder='')
               |                                         
-              label(for='') Email
+              label(for='from') Email
               |                                         
-              input.form-control(type='email', id='', placeholder='')
+              input.form-control(type='email', id='from', name='from', placeholder='')
               |                                         
-              label(for='') Message
+              label(for='body') Message
               |                                         
-              textarea#textArea(data-pg-name='message', style='width: 100%')
+              textarea#textArea(data-pg-name='body', name='body', style='width: 100%' )
             |                                     
             button.btn.btn-lg.myBtn(type='submit') Submit
         // end div col-md-6

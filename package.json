@@ -20,6 +20,7 @@
     "monk": "https://github.com/vccabral/monk.git",
     "morgan": "~1.6.1",
     "multer": "*",
+    "nodemailer": "^4.6.3",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "~2.3.0"
   }

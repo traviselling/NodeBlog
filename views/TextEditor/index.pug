@@ -2,56 +2,59 @@ extends textEditorLayout
 
 block content
 
+
 	.logo
-		img(src='images/LogoGlasses150.png', alt='')
+		img(src='/images/LogoGlasses150.png', alt='')
 	// end logo
 	#nav
+		.logged
+			p 
+			| logged in as 
+			span.userName 
 		ul
 			li
-				a(href='/') HOME  
+				a(href='/apps') APPS                  
 			li
-				a(href='/apps') APPS    
+				a(href='/services') SERVICES                 
 			li
-				a(href='/services') SERVICES                   
+				a(href='/about') ABOUT                  
 			li
 				a(href='/contact') CONTACT
+			li
+				a(href='/users/login') LOGIN                    
 	// end nav
-	#mainWindow.row
+	#mainWindow.col-md-12.addForm
 		#previewWindow.col-md-6
-			div
-				h2 preview                     
+			h2 preview                     
 		#editorWindow.col-md-6
 			div.editorTop
 				h2 editor 
 				div.row.editorHeader
-					div.col-md-4.text
-						label title
-						input(name='title' type='text' value='')
-						select.form-control(name='text')
-							option(value='text') text
-							option(value='bold') bold
-							option(value='italics') italics
-							option(value='underline') underline
-					div.col-md-4.images
-						label category
-						input(name='category' type='text' value='')
-						select.form-control(name='image')
-							option(value='image') image
-							option(value='small') small
-							option(value='medium') medium
-							option(value='full width') full width 
-					div.col-md-4.structure
-						label tags
-						input(name='tags' value='' type='text')
-						select.form-control(name='structure')
-							option(value='structure') structure
-							option(value='1') 1 column
-							option(value='2') 2 columns
-							option(value='3') 3 columns
-				div.row.editorBodyContainer
-					div.col-md-12.editorBody 
-						textarea(name='textArea' class='textArea')
-				div.row.editorFooter
-					div.col-md-6.editorFooterLeft
-						div.btn.myBtn.pull-left submit
-					div.col-md-6.editorFooterRight
+					form(method='post', action='', enctype="multipart/form-data")
+						.editorHeaderLeft.col-md-6
+							.form-group
+								label Title:
+								input.form-control(name='title', type='text', id='title')
+							.form-group
+								label Category:
+								input.form-control(name='category', type='text', id='category')
+						.editorHeaderRight.col-md-6
+							.form-group
+								label Author:
+								input.form-control(name='author', type='text', id='author')
+							.form-group
+								label Tags:
+								input.form-control(name='tags', type='text')
+						.editorBodyContainer.row
+							.editorBody.col-md-12
+								.form-group
+									textarea.form-control.textArea(name='body', id='editorBody')
+						div.row.editorFooter
+							div.col-md-6.editorFooterLeft
+								.form-group
+									button.btn.myBtn(type='button' id='previewBtn') PREVIEW
+									button.btn.myBtn(type='submit') PUBLISH
+							div.col-md-6.editorFooterRight
+								.form-group
+									input.form-control.fileInput.btn.myBtn(name='mainimage', type='file')
+									a.btn.myBtn(type='button' id='actionBtn' href='/texteditor/action') ACTION
