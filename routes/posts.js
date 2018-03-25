@@ -5,6 +5,14 @@ var upload = multer({ dest: './public/images' })
 var mongo = require('mongodb');
 var db = require('monk')('localhost/scApp');
 
+router.get('/', function(req, res, next) {
+	var db = req.db;
+	var posts = db.get('posts');
+	posts.find({}, {limit:6, sort :{_id: -1}}, function(err, posts){
+		res.render('posts', { posts: posts });
+	});
+});
+
 router.get('/show/:id', function(req, res, next) {
 	var posts = db.get('posts');
 
@@ -49,7 +57,7 @@ router.post('/add', upload.single('mainimage'), function(req, res, next) {
 	var errors = req.validationErrors();
 
 	if(errors){
-		res.render('addpost',{
+		res.render('error',{
 			"errors": errors
 		});
 	} else {

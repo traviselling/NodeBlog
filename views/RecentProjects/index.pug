@@ -11,6 +11,8 @@ block content
 			span.userName 
 		ul
 			li
+				a(href='/') HOME
+			li
 				a(href='/apps') APPS
 				|                       
 				img(src='images/apps.png', alt='')
@@ -31,8 +33,11 @@ block content
 				img(src='images/contact.png', alt='')
 			|
 			li
-				a(href='/users/login') LOGIN
-				|                       
+				a(href='/posts') BLOG
+			li
+				a(href='/recent/projects') PROJECTS
+			li
+				a(href='users/login') LOGIN                         
 	// end nav
 	#mainWindow.col-md-12
 		.recentProjectContainer.container

@@ -57,16 +57,18 @@ h3{
 
 }
 #nav {
-  width:8%;
+    width:8%;
     height: 795px;
     min-height: 100%;
+    /*background-color:rgba(255,140,0, 0.5);*/
     background-color:rgba(0,0,0, 0.3);
     text-align:center;
     padding-top: 20px;
     padding-left: 30px;
     padding-right:30px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
+
 }
 .logo{
   position: absolute;
@@ -86,7 +88,6 @@ h3{
 #nav ul{
   position:relative;
   top:150px;
-
 }
 #nav ul li{
   margin-bottom: 20%;
@@ -94,17 +95,15 @@ h3{
 }
 #nav li{
   list-style:none;
-  margin-top:10%;
+  margin-bottom:10%;
   margin-right: 20px;
   letter-spacing: .1em;
-  border-top: 1px solid rgba(	241, 195, 126, .1);
-
   padding-top: 30px;
 }
 #nav li img{
   height:25px;
   float: right;
-
+  display: none;
 }
 #nav li a{
   text-decoration: none;
@@ -113,7 +112,10 @@ h3{
   font-size: 1.8rem;
   font-weight: 100;
   color:#F1c37e;
-
+  margin-bottom: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid rgba(241, 195, 126, .1);
 }
 #nav li a:hover{
   color:white;

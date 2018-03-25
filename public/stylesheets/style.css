@@ -15,6 +15,7 @@ body ,html{
     background-image: url("../images/bgHome.png");
     background-repeat: no-repeat;
     background-position: 50% 30%;
+    font-family: "Open Sans",sans-serif;
 }
 h1{
   color:white;
@@ -138,8 +139,10 @@ h3{
   width:300px;
   height:300px;
   margin:20px;
+  margin-top: 60px;
   display: inline-block;
   background-color: rbga(0, 0, 0, 0.5);
+  vertical-align: top;
 }
 .postImgHeader{
   height:100px;
@@ -174,9 +177,10 @@ h3{
   position: absolute;
   z-index: 1;
   font-size: 5rem;
-  left:25%;
+  left:33%;
   top:10%;
 }
+
 .postPageBody{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 2rem;
@@ -273,39 +277,43 @@ text-align: center;
   overflow: hidden;
 }
 #appWindow{
-  padding-left:10%;
+  padding-left:15%;
   padding-right:10%;
 }
+#appWindow h2{
+  margin-top:4%;
+  margin-bottom:-4%;
+}
 .appDisplay1{
-  height: 150px;
-  width :200px;
+  height: 300px;
+  width :300px;
   display: inline-block;
-  border: 2px solid #f1c37e;
+  border: 1px solid #f1c37e;
   background-image: url("../images/userAuthThumb.jpg");
-  background-position: center;
+  background-position: right 10%;
   padding:0;
 }
 .appDisplay2{
-  height: 150px;
-  width :200px;
+  height: 300px;
+  width :300px;
   display: inline-block;
-  border: 2px solid #f1c37e;
-  background-image: url("../images/screenshotTextEditor.png");
+  border: 1px solid #f1c37e;
+  background-image: url("../images/textEditorThumb.jpg");
   /* background-position: center; */
   padding:0;
 }
 .appDisplay3{
-  height: 150px;
-  width :200px;
+  height: 300px;
+  width :300px;
   display: inline-block;
-  border: 2px solid #f1c37e;
+  border: 1px solid #f1c37e;
   background-image: url("../images/blogThumb.jpg");
   background-position: top;
   padding:0;
 }
 .appCaption{
   color:#FFF;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   font-family: "Open Sans",sans-serif;
 }
 .infoSection, .aboutSection{
@@ -483,6 +491,36 @@ ul.error li{
   color:#f1c37e;
   font-size: 1.5rem;
 }
+.divider{
+  height: 2px;
+  background-color: #f1c37e;
+  margin-bottom:20px;
+  margin-top: 20px;
+}
+p.showCategory{
+  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0;
+  width: 300px;
+  position: relative;
+  top:200px;
+  font-size: 1.9rem;
+
+}
+.showCategory a{
+  color:#fff;
+}
+.showAuthor{
+  position: relative;
+  top:200px;
+  width:300px;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+.showAuthor span{
+  color: :#fff;
+}
+.showDate{
+  color:#FFF;
+}
 
 @media (min-width:320px) and (max-width:767px) {
   body{
@@ -642,5 +680,4 @@ body{
 .logo{
   position: absolute;
   z-index: 2;
-}
 }

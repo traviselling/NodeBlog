@@ -11,19 +11,15 @@ router.get('/', function(req, res, next){
 	})
 });
 
-// router.post('/', function(req, res){
-//   console.log(req.body.title  + req.body.category + req.body.body);
-// 	res.render('/thankyou');
-// });
-router.post('/action', function(req, res, next){
+// This is just a route I'm using to experiment different actions and event triggers
+
+router.get('/action', function(req, res, next){
 	console.log("I am here!");
 	var things = db.get('posts');
 	things.find({}, {}, function(err, things){
 		res.render('TextEditor/action', { things: things });
-		console.log('Now I am here!');
-		res.redirect('/');
+		
 	});
-
 });
 
 

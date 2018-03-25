@@ -1,68 +1,56 @@
-extends layout
+extends textEditorLayout
 
 block content
 	.logo
 		img(src='/images/LogoGlasses150.png', alt='')
-	// end logo
 	#nav
-		.logged
-			p 
-			| logged in as 
-			span.userName 
 		ul
 			li
-				a(href='/apps') APPS
-				|                       
-				img(src='/images/apps.png', alt='')
-			|                   
+				a(href='/') HOME                  
 			li
-				a(href='/services') SERVICES
-				|                       
-				img(src='/images/services.png', alt='')
-			|                   
+				a(href='/apps') APPS                 
+			li
+				a(href='/services') SERVICES                
 			li
 				a(href='/about') ABOUT
-				|                       
-				img(src='/images/about.png', alt='')
-			|                   
 			li
 				a(href='/contact') CONTACT
-				|                       
-				img(src='/images/contact.png', alt='')
-			|
 			li
-				a(href='/users/login') LOGIN
-				|                       
-	// end nav
+				a(href='/recentprojects') PROJECTS
+			li
+				a(href='/posts')  BLOG                    
 	#mainWindow.col-md-12.addForm
-		h1=title
-		ul.errors
-			if errors
-				each error, i in errors
-					li.alert.alert-danger #{error.msg}
-		.addFormWrapper
-			form(method='post', action='/posts/add', enctype="multipart/form-data")
-				.form-group
-					label Title:
-					input.form-control(name='title', type='text')
-				.form-group
-					label Category
-					select.form-control(name='category')
-						each category, i in categories
-							option(value='#{category.name}') #{category.name}
-				.form-group
-					label Body
-					textarea.form-control(name='body', id='body')
-				.form-group
-					label Main Image:
-					input.form-control(name='mainimage', type='file')
-				.form-group
-					label Author:
-					select.form-control(name='author')
-						option(value='Travis Elling') Travis Elling
-						option(value='John Doe') John Doe
-				input.btn.btn-default(name='submit',type='submit',value='Save')
-				script(src='/ckeditor/ckeditor.js')
-				script
-					| CKEDITOR.replace('body');
-		
+		#previewWindow.col-md-6
+			h2 preview                     
+		#editorWindow.col-md-6
+			div.editorTop
+				h2 editor 
+				div.row.editorHeader
+					form(method='post', action='', enctype="multipart/form-data")
+						.editorHeaderLeft.col-md-6
+							.form-group
+								label Title:
+								input.form-control(name='title', type='text', id='title')
+							.form-group
+								label Category:
+								input.form-control(name='category', type='text', id='category')
+						.editorHeaderRight.col-md-6
+							.form-group
+								label Author:
+								input.form-control(name='author', type='text', id='author')
+							.form-group
+								label Tags:
+								input.form-control(name='tags', type='text')
+						.editorBodyContainer.row
+							.editorBody.col-md-12
+								.form-group
+									textarea.form-control.textArea(name='body', id='editorBody')
+						div.row.editorFooter
+							div.col-md-6.editorFooterLeft
+								.form-group
+									button.btn.myBtn(type='button' id='previewBtn') PREVIEW
+									button.btn.myBtn(type='submit') PUBLISH
+							div.col-md-6.editorFooterRight
+								.form-group
+									input.form-control.fileInput.btn.myBtn(name='mainimage', type='file')
+									a.btn.myBtn(type='button' id='actionBtn' href='/texteditor/action') ACTION

@@ -108,7 +108,7 @@ app.use('/recentprojects', recentProjects);
 
 app.post('/contact', function (req, res) {
   var mailOpts, smtpTrans;
-  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+  //Setup Nodemailer transport
   smtpTrans = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
@@ -129,7 +129,7 @@ app.post('/contact', function (req, res) {
     from: "Smarty Cat Admin",
     to: req.body.from,
     subject:"Inquiry Received",
-    html: "Thank you for contacting us at http://smartycatdesigns.com:3000. We will be answering your question shortly. Until then please have a look around our site and see what else interests you."
+    html: "Thank you for contacting us at Smarty Cat Designs. We will be addressing your inquiry shortly. Until then please have a look around our site and see what else interests you."
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
       //Email not sent
@@ -145,7 +145,7 @@ app.post('/contact', function (req, res) {
   smtpTrans.sendMail(mailOptsRelay, function (error, response) {
       //Email not sent
       if (error) {
-          console.log("The Mail Did Not Send!!!");
+          console.log("The Relay Mail Did Not Send!!!");
       }
       //Yay!! Email sent
       else {

@@ -31,16 +31,24 @@ block content
 				img(src='/images/contact.png', alt='')
 			|
 			li
-				a(href='/users/login') LOGIN
-				|                       
+				a(href='/posts') BLOG
+			li
+				a(href='/recentprojects') PROJECTS
+			li
+				a(href='users/login') LOGIN                         
 	// end nav
 	#mainWindow.col-md-12.single
 		.singlePost
 			h1.postPageTitle #{post.title}
-			p.meta Posted in 
-				a(href='/categories/show/' + post.category) #{post.category} by #{post.author} on #{moment(post.date).format("MM-DD-YYYY")}
+			p.showCategory Posted in 
+				a(href='/categories/show/' + post.category) #{post.category}
+			p.showAuthor by 
+				span.showDate #{post.author} 
+				span on 
+				span.showDate #{moment(post.date).format("MM-DD-YYYY")}
 				.mainImgPage
 					img.image-responsive(src='/images/' + post.mainimage)
 			.postBodyContainer
 				.postPageBody
+					.divider
 					!=post.body
