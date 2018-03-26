@@ -79,7 +79,7 @@ padding: 0%;
   width: 75%;
   text-align: center;
   height:100%;
-  padding:2%;
+  padding:3%;
   color: #000;
   display: inline-block;
   background: #f2f3f4; /* Old browsers */
@@ -134,14 +134,21 @@ padding: 0%;
 .postAuthor{
   width:150px;
   position: relative;
-  left:180px;
+  left:215px;
+  top:40px;
   margin:0;
 }
 .postDate{
   position: relative;
-  right:195px;
-  font-size: 2.3rem;
-
+  left:550px;
+  font-size: .9rem;
+}
+.postCategory{
+  width:350px;
+  color:whitesmoke;
+  position: relative;
+  top:40px;
+  left:160px;
 }
 .authorSub{
   /*position: relative;
@@ -169,17 +176,13 @@ padding: 0%;
   margin-bottom: -20px
 
 }
+
 .postTitle a{
   color:#3d3d3d;
   font-size: 1.6rem;
   margin-top: -20px;
 }
-.postDate{
-  position: relative;
-  float: right;
-  font-size: .6rem;
-  margin-top: 15px;
-}
+
 
 label{
   color:silver;
@@ -192,4 +195,8 @@ label{
 .aboutWindow{
 color: whitesmoke;
 display: inline-block;
+}
+.row{
+  margin-left:0px;
+  argin-right:0px;
 }

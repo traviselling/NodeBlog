@@ -25,6 +25,8 @@ block content
 			img.mainImg(src='/images/' + post.mainimage)
 		p.heading=post.title
 		p.postAuthor by #{post.author}
+		p.postCategory 
+			span.categorySpan posted in #{post.category}
 		.postDate on #{moment(post.date).format("MM-DD-YYYY")}
 		.postContainer
 			p.postBody #{post.body}

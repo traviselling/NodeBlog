@@ -89,17 +89,10 @@ background: linear-gradient(to bottom, #dcdcdc 0%, #f2f2f2 51%, #dcdcdc 100%); /
   text-align: center;
   overflow: hidden;
   margin: 0 auto;
-
 }
 
 
 .postContainer{
-  /*position: relative;
-  top:200px;
-  height:400px;
-  width:75%;
-  display: inline-block;
-  padding-top: 5%;*/
   margin-top: 3%;
   width: 75%;
   text-align: center;
@@ -137,9 +130,7 @@ background: linear-gradient(to bottom, #dcdcdc 0%, #f2f2f2 51%, #dcdcdc 100%); /
   display: inline-block;
 
 }
-/* .postDate, .postAuthor, .placeAboutText, .placeAboutTitle{
-  color:whitesmoke;
-} */
+
 
 .placeAboutContainer{
   /*position: relative;*/
@@ -194,9 +185,7 @@ background: linear-gradient(to bottom, #dcdcdc 0%, #f2f2f2 51%, #dcdcdc 100%); /
   float: right;
   margin-right: 110px;
   margin-left: -110px;
-  /*margin-top: 20px;*/
-  margin-bottom: -20px
-
+  margin-bottom: -20px;
 }
 .postTitle a{
   color:#000;
@@ -246,4 +235,12 @@ display: inline-block;
   background-color: #fff;
   margin-top:100px;
   margin-bottom:100px;
+}
+.form-group input{
+  background-color: #000;
+  color:#fff;
+}
+select.form-control,#document{
+  background-color:#000;
+  color:#FFF;
 }
