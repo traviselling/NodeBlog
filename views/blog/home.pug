@@ -1,45 +1,43 @@
 extends blogLayout
 
 block content
-  .underLogoCircle
-    .logo
-      img(src='images/blog/logo.png', alt='')
-        
-        
-  #nav
-    ul
-      li
-        a(href='/')
-          img(src='images/blog/home.png')  
-      |                   
-      li
-        a(href='/blog/contact') 
-          img(src='images/blog/contact.png')  
-      |                   
-      li
-        a(href='/blog/about') 
-          img(src='images/blog/about.png')
-      li
-        a(href='/blog/add')
-          img(src='images/blog/blog.png')
-  // end nav
-  #mainWindow.col-md-12
-    p.heading Developer - Pondererer - Different
-    .articleList
-      if posts
-       each post, i in posts
-        .articleListItem
-          p.postTitle
-           a(href='blog/show/' + post._id)
-            =post.title
-          .authorSub #{post.author}
-          .postDate #{moment(post.date).format("MM-DD-YYYY")}
-          .postText
-            !=truncateText(post.body,200)
-          a.more.myReadMoreBtn(href='blog/show/' + post._id) Read More
-    div.secodaryContainer.col-md-12.container
-      p.secondaryHeader travel with an alternate perspective
-      div.divider
-      p.secondaryText Join me as I travel to various places and lands and discover new things and cultures along the way. Dont bother booking reservations at a hotel or fancy restaurant. That isn't how I travel.Were going to places where others may go but not in the manner that I go. We are going to enjoy life as it is. No resorts.
-    
-        
+	.underLogoCircle
+		.logo
+			img(src='images/blog/logo.png', alt='')
+
+
+	#nav
+		ul
+			li
+				a(href='/')
+					img(src='images/blog/home.png')  
+			|                   
+			li
+				a(href='/blog/contact') 
+					img(src='images/blog/contact.png')  
+			|                   
+			li
+				a(href='/blog/about') 
+					img(src='images/blog/about.png')
+			li
+				a(href='/blog/add')
+					img(src='images/blog/blog.png')
+	// end nav
+	#mainWindow.col-md-12
+		p.heading Traveler - Developer - Different
+		.articleList
+			if posts
+				each post, i in posts
+					.articleListItem
+						p.postTitle
+							a(href='blog/show/' + post._id)
+								=post.title
+						.authorSub #{post.author}
+						.postDate #{moment(post.date).format("MM-DD-YYYY")}
+						.postText
+							p!=truncateText(post.body,200)
+						a.more.myReadMoreBtn(href='blog/show/' + post._id) Read More
+		div.secodaryContainer.col-md-12.container
+			p.secondaryHeader travel with an alternate perspective
+			div.divider
+			p.secondaryText Join me as I travel to various places and lands and discover new things and cultures along the way. Dont bother booking reservations at a hotel or fancy restaurant. That isn't how I travel.Were going to places where others may go but not in the manner that I go. We are going to enjoy life as it is. No resorts.
