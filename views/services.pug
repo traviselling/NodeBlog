@@ -33,42 +33,15 @@ block content
         a(href='users/login') LOGIN  
   // end nav
   #mainWindow.col-md-12
-    #serviceWindow
-      h2 SERVICES WE PROVIDE
-      |                     
-      .col-md-4.serviceBox
-        h3 CUSTOM WEBSITES
-        |                         
-        p.serviceText
-          | Websites tailor made to your unique business. Websites not built on Wordpress.
-      |                     
-      .col-md-4.serviceBox
-        h3 SINGLE PAGE APPS
-        |                         
-        p.serviceText
-          | Web Applications built on Angular or React to bring you into the web 2.0
-      |                     
-      .col-md-4.serviceBox
-        h3 DESKTOP APPS
-        |                         
-        p.serviceText
-          | We develop Applications for Desktop and Mobile users.
-      |                     
-      .col-md-4.serviceBox
-        h3 PLUG-INS
-        |                         
-        p.serviceText
-          | If you need to have a bit more functionality on your current website then we can develop that for you.
-      |                     
-      .col-md-4.serviceBox
-        h3 WP CONVERSION
-        |                         
-        p.serviceText
-          | If you are tired of all of the complications from owning a Wordpress website then why not switch to Nodejs?
-      |                     
-      .col-md-4.serviceBox
-        h3 TROUBLESHOOTING
-        |                         
-        p.serviceText
-          | If you arent ready to change your Wordpress website then maybe you just need to have a few issues fixed.
-        
+    #postWindow
+      if posts
+        each post, i in posts
+          .posts
+            .postImgHeader 
+              img(src='/images/' + post.mainimage)
+            p.postTitle
+              a(href='/posts/show/' + post._id)
+                =post.title
+            .postText 
+              !=truncateText(post.body + "...",100) 
+              a.myReadMoreBtn(href='/posts/show/' + post._id) Learn More

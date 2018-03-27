@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var multer = require('multer');
+var upload = multer({ dest: './public/images' })
+var mongo = require('mongodb');
+var db = require('monk')('localhost/scApp');
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('services', { title: 'Services' });
+	var db = req.db;
+	var posts = db.get('posts');
+	posts.find({category: "Services"},{sort:{title:1}}, function(err, posts){
+		res.render('services', { posts: posts });
+	});
 });
-
 module.exports = router;
