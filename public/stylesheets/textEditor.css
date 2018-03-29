@@ -124,12 +124,12 @@ h3{
 #mainWindow {
     height:95vh;
     min-height: 95vh;
-    /* text-align: center; */
     padding:20px;
 }
 #editorWindow{
   border-left:.5px solid #F1c37E;
   height: 90vh;
+
 }
 .editorHeader{
   margin-top: 40px;
@@ -220,4 +220,19 @@ label{
   height:2px;
   background-color: #F1c37e;
   clear:both;
+}
+.myForm{
+  width:45%;
+  margin: auto;
+}
+.projectEditorWindow{
+  text-align: center;
+
+}
+.projectHeaderText{
+  display:inline-block;
+
+}
+.projectEditorTop{
+  text-align: center;
 }

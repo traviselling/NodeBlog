@@ -8,8 +8,13 @@ var db = require('monk')('localhost/scApp');
 router.get('/', function(req, res, next) {
 	var db = req.db;
 	var posts = db.get('posts');
-	posts.find({category: "Services"},{sort:{title:1}}, function(err, posts){
-		res.render('services', { posts: posts });
+	posts.find({category: "Services"},
+  {sort:{title:1}},
+  function(err, posts){
+		res.render('services',
+    { posts: posts,
+      title: "Services"
+     });
 	});
 });
 module.exports = router;

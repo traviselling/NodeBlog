@@ -1,0 +1,53 @@
+extends recentProjectLayout
+
+block content
+	.logo
+		img(src='/images/LogoGlasses150.png', alt='')
+	// end logo
+	#nav
+		.logged
+			p 
+			| logged in as 
+			span.userName 
+		ul
+			li
+				a(href='/apps') APPS
+				|                       
+				img(src='/images/apps.png', alt='')
+			|                   
+			li
+				a(href='/services') SERVICES
+				|                       
+				img(src='/images/services.png', alt='')
+			|                   
+			li
+				a(href='/about') ABOUT
+				|                       
+				img(src='/images/about.png', alt='')
+			|                   
+			li
+				a(href='/contact') CONTACT
+				|                       
+				img(src='/images/contact.png', alt='')
+			|
+			li
+				a(href='/posts') BLOG
+			li
+				a(href='/recentprojects') PROJECTS
+			li
+				a(href='users/login') LOGIN                         
+	// end nav
+	#mainWindow.row
+		.projectWindow
+			.col-md-3.showColumnLeft
+				h1.projectShowTitle #{post.title}
+				p.projectShowCategory  
+					a(href='/categories/show/' + post.category) #{post.category}
+				.postBodyContainer
+					.postPageBody
+						.divider
+						!=post.body
+			.col-md-9.showColumnRight
+				.projectImg
+					img.image-responsive(src='/images/' + post.mainimage)
+			

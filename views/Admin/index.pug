@@ -1,37 +1,20 @@
 extends adminLayout
 
 block content
-
+  
   .logo
-    img(src='images/LogoGlasses150.png', alt='')
-  // end logo
-  #nav.col-md-3
+    img(src='../images/LogoGlasses150.png', alt='')
+  #nav
+    .logged
+      p 
+      | logged in as 
+      span.userName 
     ul
       li
         a(href='/') HOME
-        |                       
-        img(src='images/home.png', alt='')
-      |                   
       li
-        a(href='/apps') APPS
-        |                       
-        img(src='images/apps.png', alt='')
-      |                   
+        a(href='/admin/addproject') ADD PROJ
       li
-        a(href='/services') SERVICES
-        |                       
-        img(src='images/services.png', alt='')
-      |                   
-      li
-        a(href='/contact') CONTACT
-        |                       
-        img(src='images/contact.png', alt='')
-  // end nav
-  #mainWindow.col-md-9
-    #aboutWindow
-      div
-        h2 admin page
-      |                     
-      .adminSectionText
-        p
-          | Smarty Cat Designs Admin
+        a(href='/admin/add') ADD POST
+  #mainWindow
+    h2 admin section

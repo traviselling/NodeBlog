@@ -1,0 +1,95 @@
+extends textEditorLayout
+
+block content
+	.logo
+		img(src='../images/LogoGlasses150.png', alt='')
+	#nav
+		ul
+			li
+				a(href='/') HOME                  
+			li
+				a(href='/recentprojects') PROJECTS
+			li
+				a(href='/posts')  BLOG
+			li
+				a(href='/admin/add') ADD POST
+			li
+				a(href='/admin') ADMIN                   
+	#mainWindow.row.addForm                 
+		#projectEditorWindow.col-md-12
+			div.projectEditorTop
+				h2.projectHeaderText add project 
+				.myForm
+					form(method='post', action='', enctype="multipart/form-data")
+						.editorHeader.col-md-12
+							.form-group
+								label Title:
+								input.form-control(name='title', type='text', id='title')
+							.form-group
+								label Category:
+								input.form-control(name='category', type='text', id='category')
+							.form-group
+								label Date:
+								input.form-control(name='projectDate', type='text', id='projectDate')
+						.editorBodyContainer.row
+							.editorBody.col-md-12
+								.form-group
+									textarea.form-control.textArea(name='body', id='editorBody')
+						div.row.editorFooter
+							div.col-md-6.editorFooterLeft
+								.form-group
+									button.btn.myBtn(type='button' id='previewBtn') PREVIEW
+									button.btn.myBtn(type='submit') PUBLISH
+							div.col-md-6.editorFooterRight
+								.form-group
+									input.form-control.fileInput.btn.myBtn(name='mainimage', type='file')
+									a.btn.myBtn(type='button' id='actionBtn' href='/texteditor/action') ACTION
+
+
+//- extends textEditorLayout
+//- 
+//- block content
+//- 	.logo
+//- 		img(src='../images/LogoGlasses150.png', alt='')
+//- 	// end logo
+//- 	#nav
+//- 		.logged
+//- 			p 
+//- 			| logged in as 
+//- 			span.userName 
+//- 		ul
+//- 			li
+//- 				a(href='/') HOME
+//- 			li
+//- 				a(href='/posts') BLOG
+//- 			li
+//- 				a(href='/recentprojects') PROJECTS
+//- 			li
+//- 				a(href='/admin/add') ADD POST
+//- 			li
+//- 				a(href='/admin') ADMIN
+//- #mainWindow
+//- 	.adminAddPostContainer
+//- 		h2 add project 
+//- 		.row.editorHeader
+//- 			form(method='post', action='', enctype="multipart/form-data")
+//- 				.editorHeader.col-md-12
+//- 					.form-group
+//- 						label Title:
+//- 						input.form-control(name='title', type='text', id='title')
+//- 					.form-group
+//- 						label Category:
+//- 						input.form-control(name='category', type='text', id='category')
+//- 				.editorBodyContainer.row
+//- 					.editorBody.col-md-12
+//- 						.form-group
+//- 							textarea.form-control.textArea(name='body', id='editorBody')
+//- 				.row.editorFooter
+//- 					.col-md-6.editorFooterLeft
+//- 						.form-group
+//- 							button.btn.myBtn(type='button' id='previewBtn') PREVIEW
+//- 							button.btn.myBtn(type='submit') PUBLISH
+//- 					.col-md-6.editorFooterRight
+//- 						.form-group
+//- 							input.form-control.fileInput.btn.myBtn(name='mainimage', type='file')
+//- 							a.btn.myBtn(type='button' id='actionBtn' href='/texteditor/action') ACTION

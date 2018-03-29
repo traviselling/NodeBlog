@@ -35,29 +35,19 @@ block content
 			li
 				a(href='/posts') BLOG
 			li
-				a(href='/recent/projects') PROJECTS
-			li
-				a(href='users/login') LOGIN                         
+				a(href='/recentprojects') PROJECTS                         
 	// end nav
-	#mainWindow.col-md-12
+	#mainWindow.row
 		.recentProjectContainer.container
-			h2 recent projects
-			section.row
-				div.col-md-4.displayColumn
-					div.displayBoxSmall.golfAnimal
-						img(src='images/RecentProjects/golfAnimalDetailed.png')
-					div.displayBoxSmall.yourMajesty
-						img(src='images/RecentProjects/your-majesty@2x-100.jpg')
-				div.col-md-4.displayBoxInfo
-					h3 golf animal
-					.divider
-					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
-					h3 twfljeb blog
-					.divider
-					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
-					h3 your majesty
-					.divider
-					p This is just some description about each of the projects here. It is meant to give the user a brief overview of the most recent projects.
-				div.col-md-4.displayColumn
-					div.displayBox.webDisplay
-						img(src='images/RecentProjects/blogPic.png')
+			if projects
+				each project, i in projects
+					.projectContainer
+						.displayBoxSmall.col-md-4
+							img(src='/images/' + project.mainimage)
+							p.projectTitle
+								=project.title
+							.divider
+							p.projectDescription
+								!=truncateText(project.body,150)
+							a.myReadMoreBtn(href='/recentprojects/show/' + project._id) Read More
+		
