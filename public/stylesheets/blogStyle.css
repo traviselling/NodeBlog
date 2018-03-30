@@ -83,13 +83,6 @@ background: linear-gradient(to bottom, #dcdcdc 0%, #f2f2f2 51%, #dcdcdc 100%); /
 }
 
 
-.pictureContainer{
-  width:100%;
-  height:500px;
-  text-align: center;
-  overflow: hidden;
-  margin: 0 auto;
-}
 
 
 .postContainer{
