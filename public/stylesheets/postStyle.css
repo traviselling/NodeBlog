@@ -63,8 +63,9 @@ width: 100%;
 }
 
 .postContainer{
+  clear: both;
   margin-top: 3%;
-  margin-left: 4%;
+  /* margin-left: 4%; */
   width: 75%;
   text-align: center;
   height:100%;
@@ -91,11 +92,13 @@ width: 100%;
 }
 
 .placeAboutContainer{
+  clear: both;
   height:100%;
   width:75%;
   display: inline-block;
   margin-top: 3%;
   margin-bottom: 3%;
+  margin-left: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -109,19 +112,21 @@ width: 100%;
   padding-bottom: 40px;
 }
 .postAuthor{
-float: left;
-margin-left: 40px;
+/* float: left;
+margin-left: 40px; */
+margin-top: 40px;
 }
 .postDate{
-clear:left;
-position:relative;
-left:400px;
+clear:both;
+float: right;
+margin-right: 40px;
+width:350px;
 }
 .postCategory{
   display: inline;
   clear:both;
   float: left;
-  margin-left: 40px;
+  margin-left: 150px;
   color:whitesmoke;
   margin-bottom: -20px;
   /* position: relative;
@@ -131,7 +136,7 @@ left:400px;
 .authorSub{
   /*position: relative;
   left:200px;*/
-  float: leftt;
+  float: left;
   /* margin-left: -150px; */
   font-size: .7rem;
   text-transform: uppercase;
@@ -139,6 +144,7 @@ left:400px;
 }
 .postTitle {
   display: inline-block;
+
 }
 
 
@@ -169,4 +175,8 @@ display: inline-block;
 }
 .authorSpan,.categorySpan{
   font-style: normal;
+}
+.divider{
+  height:2px;
+  background-color: whitesmoke;
 }
