@@ -42,6 +42,6 @@ block content
             p.postTitle
               a(href='/posts/show/' + post._id)
                 =post.title
-            .postText 
+            p.postText 
               !=truncateText(post.body + "...",100) 
-              a.myReadMoreBtn(href='/posts/show/' + post._id) Learn More
+              a.myLearnMoreBtn(href='/posts/show/' + post._id) Learn More

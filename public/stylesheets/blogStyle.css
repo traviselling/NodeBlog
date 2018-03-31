@@ -237,3 +237,47 @@ select.form-control,#document{
   background-color:#000;
   color:#FFF;
 }
+
+
+@media (min-width:320px) and (max-width:767px) {
+  .articleList{
+    width:70%;
+  }
+  body,html{
+
+    background-size: 100vw;
+    background-attachment: fixed;
+    width:100vw;
+    height: 100vh;
+  }
+  .heading{
+    font-size:2rem;
+    /* margin-top:2%; */
+  }
+  .postTitle{
+    margin-top: 60px;
+
+  }
+  .more{
+    display:none;
+  }
+  /* #nav{
+    position: fixed;
+    z-index: 1;
+    background-color: #dcdcdc;
+    width:75px;
+    height: 630px;
+  } */
+  .postText{
+    display:none;
+  }
+  .secondaryText{
+    width:90%;
+  }
+  .secondaryHeader{
+    font-size:2.0;
+  }
+  .divider{
+    width:85%;
+  }
+}

@@ -1,0 +1,26 @@
+/* Services */
+#serviceWindow{
+  padding-left:8%;
+}
+.serviceBox{
+  height: 200px;
+  width :300px;
+  display: inline-block;
+  border: 1px solid #F1c37E;
+  margin:1%;
+}
+.serviceText{
+  line-height: 27px;
+  font-size: 1.2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /* letter-spacing: .1rem; */
+  text-align: justify;
+
+}
+.serviceBox h3{
+  border-bottom: 1px solid #F1c37E;
+  padding-bottom: 6%;
+}
+.serviceWindow h2{
+  margin-left: -20px;
+}

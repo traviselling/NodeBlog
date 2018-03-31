@@ -2,6 +2,7 @@ html,body{
   font-family: "Open Sans",sans-serif;
 }
 .displayBox{
+
   height: 600px;
   width:290px;
   border:0.5px solid #f1c37e;
@@ -11,12 +12,11 @@ html,body{
   border-radius: 3px;
 }
 .displayBoxSmall{
-  margin-left:100px;
+  margin-left: 7%;
   margin-bottom: 20px;
   /* height:290px; */
   padding-top: 15px;
-
-  width:24%;
+  width:305px;
   border:1px solid #F1c37e;
   background-color: rgba(0,0,0,0.1);
   border-radius:3px;
@@ -29,6 +29,7 @@ html,body{
 }
 #mainWindow{
   padding:20px;
+  text-align:center;
 }
 .recentProjectContainer{
   display: inline-block;
@@ -67,13 +68,10 @@ text-align: justify;
 }
 .projectImg img{
   /* height:1000px; */
-  width:700px;
+  width:600px;
 }
-.projectTitle{
 
-}
-.showCategory{
-}
+
 .projectWindow{
   padding-left: 200px;
 }
@@ -106,4 +104,45 @@ p.projectShowCategory{
 }
 .showColumnRight{
   padding-top: 40px;
+}
+.projectLearnMoreBtn{
+  border: 1px solid #F1c37e;
+  border-radius: 3px;
+  padding:2%;
+  color: whitesmoke;
+  float: right;
+  margin-top: 10px;
+}
+
+
+@media (min-width:320px) and (max-width:767px) {
+  body{
+    background-image: url("../images/bgHomePortrait@0.5x.png");
+    background-repeat: no-repeat;
+
+}
+.projectLearnMoreBtn{
+
+}
+.divider{
+
+}
+.projectDescription{
+
+}
+.displayBoxSmall{
+  height:560px;
+  margin-left:2%;
+  display: inline-block;
+}
+.projectWindow{
+  padding:0;
+  text-align: center;
+}
+.projectImg img{
+  width:90vw;
+}
+}
+@media (min-width:768px) and (max-width:991px) {
+
 }

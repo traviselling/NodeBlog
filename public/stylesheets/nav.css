@@ -1,0 +1,65 @@
+#nav {
+    width:8%;
+    height: 795px;
+    min-height: 100%;
+    /*background-color:rgba(255,140,0, 0.5);*/
+    background-color:rgba(0,0,0, 0.3);
+    text-align:center;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right:30px;
+    position: fixed;
+    z-index: 1;
+}
+.logo{
+  position: fixed;
+  z-index: 2;
+  top:2%;
+  left:1%;
+}
+.logo img {
+  width:100px;
+}
+.logged{
+  float:right;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.userName{
+  font-family: "Alfa Slab One",cursive;
+  letter-spacing: .2rem;
+  margin-left: 1%;
+}
+#nav ul{
+  position:relative;
+  top:150px;
+}
+#nav ul li{
+  margin-bottom: 20%;
+  font-size: .8rem;
+}
+#nav li{
+  list-style:none;
+  margin-bottom:10%;
+  margin-right: 20px;
+  letter-spacing: .1em;
+  padding-top: 30px;
+}
+#nav li img{
+  height:25px;
+  float: right;
+  display: none;
+}
+#nav li a{
+  text-decoration: none;
+  float:left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  color:#F1c37e;
+  margin-bottom: 10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid rgba(241, 195, 126, .1);
+}
+#nav li a:hover{
+  color:white;
+}

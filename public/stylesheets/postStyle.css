@@ -22,11 +22,6 @@ body, html{
   position: fixed;
   z-index: 2;
   text-align: center;
-
-}
-h1{
-  color:#000;
-  font-family: 'Spectral SC', serif;
 }
 #nav{
   position: fixed;
@@ -46,6 +41,12 @@ h1{
   height:30px;
   margin-top: 90%;
 }
+
+h1{
+  color:#000;
+  font-family: 'Spectral SC', serif;
+}
+
 #mainWindow{
 text-align: center;
 padding: 0%;
@@ -179,4 +180,31 @@ display: inline-block;
 .divider{
   height:2px;
   background-color: whitesmoke;
+}
+
+@media (min-width:320px) and (max-width:767px) {
+  .articleList{
+    width:70%;
+  }
+  body,html{
+    width:100vw;
+    height: 100vh;
+  }
+  .heading{
+    font-size:2rem;
+    /* margin-top:2%; */
+  }
+  .postDate{
+    display:none;
+  }
+  .postCategory{
+    margin-bottom:20px;
+
+  }
+  .placeAboutTitle{
+    font-size: 1.8rem;
+  }
+  .secondaryHeader{
+    font-size:1.6rem;
+  }
 }
