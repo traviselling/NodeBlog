@@ -1,8 +1,6 @@
 body, html{
   color:#fff;
   background-color: #000;
-  /*background-image: url("../images/blog/headerBannerCat.jpg");
-  background-repeat: no-repeat;*/
   font-family: 'Spectral', serif;;
   font-size:1.1rem;
   line-height: 1.5rem;
@@ -214,7 +212,7 @@ display: inline-block;
   .postContainer{
     width:90%;
   }
-  
+
   .placeAboutTitle{
     font-size: 1.8rem;
   }
