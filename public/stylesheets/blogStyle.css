@@ -241,7 +241,7 @@ select.form-control,#document{
 
 @media (min-width:320px) and (max-width:767px) {
   .articleList{
-    width:70%;
+    width:90%;
   }
   body,html{
 
@@ -250,13 +250,30 @@ select.form-control,#document{
     width:100vw;
     height: 100vh;
   }
-  .heading{
-    font-size:2rem;
-    /* margin-top:2%; */
+  .logo img,.underLogoCircle{
+    width:75px;
+    height:75px;
+    left:3%;
+    top:84%;
   }
-  .postTitle{
-    margin-top: 60px;
+  .heading{
+    font-size:1.5rem;
+  }
+  #nav{
+    display:none;
+  }
 
+  .postTitle{
+    /* margin-top: 25%;
+    margin-bottom:-25%;
+    margin-left:12%; */
+    position:relative;
+    top:45%;
+    left:12%;
+  }
+  .postTitle a{
+    display:inline-block;
+    font-size:1rem;
   }
   .more{
     display:none;
@@ -273,11 +290,26 @@ select.form-control,#document{
   }
   .secondaryText{
     width:90%;
+    margin-left:5%;
   }
   .secondaryHeader{
-    font-size:2.0;
+    font-size:1.8rem;
+    margin-top:10%;
   }
   .divider{
-    width:85%;
+    width:100%;
+    margin-top:10%;
+    margin-bottom:10%;
+  }
+  .articleListItem{
+    text-align: center;
+  }
+  .container{
+    width: 100%;
+  }
+  .secodaryContainer{
+    width:90%;
+    padding: 0;
+    text-align: center;
   }
 }

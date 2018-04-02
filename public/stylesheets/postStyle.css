@@ -182,16 +182,26 @@ display: inline-block;
   background-color: whitesmoke;
 }
 
-@media (min-width:320px) and (max-width:767px) {
-  .articleList{
-    width:70%;
-  }
+
+  @media (min-width:320px) and (max-width:767px) {
+
+
+
   body,html{
     width:100vw;
     height: 100vh;
   }
+  .logo img,.underLogoCircle{
+  width:75px;
+  height:75px;
+  left:3%;
+  top:84%;
+}
+  #nav{
+    display:none;
+  }
   .heading{
-    font-size:2rem;
+    font-size:1.4rem;
     /* margin-top:2%; */
   }
   .postDate{
@@ -199,8 +209,12 @@ display: inline-block;
   }
   .postCategory{
     margin-bottom:20px;
-
+    margin-left: 6%;
   }
+  .postContainer{
+    width:90%;
+  }
+  
   .placeAboutTitle{
     font-size: 1.8rem;
   }
