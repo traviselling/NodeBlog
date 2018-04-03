@@ -234,27 +234,33 @@ text-align: center;
   height: 300px;
   width :300px;
   display: inline-block;
-  border: 1px solid #f1c37e;
-  background-image: url("../images/userAuthThumb.jpg");
-  background-position: right 10%;
+
+  background-image: url("../images/authApp.png");
+
+  background-size: contain;
   padding:0;
 }
 .appDisplay2{
   height: 300px;
   width :300px;
   display: inline-block;
-  border: 1px solid #f1c37e;
-  background-image: url("../images/textEditorThumb.jpg");
+
+  background-image: url("../images/editorApp.png");
   /* background-position: center; */
   padding:0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .appDisplay3{
   height: 300px;
   width :300px;
   display: inline-block;
-  border: 1px solid #f1c37e;
-  background-image: url("../images/blogThumb.jpg");
-  background-position: top;
+  
+  background-image: url("../images/blogApp.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding:0;
 }
 .appCaption{
@@ -536,21 +542,26 @@ p.showCategory{
   }
 
 #nav {
-  /* position:fixed; */
+  position:fixed;
   /* z-index: 1; */
   /* top:28%; */
   background-color:rgba(0,0,0, 0.0);
   text-align:center;
-  padding-top: 24%;
+  /* padding-top: 24%; */
   color: white;
+
   text-align: center;
   padding-left:0px;
+  width:100vw;
+  padding-top: 0px;
+
+
 }
 #nav ul{
   /* padding-left: 20px; */
 display: inline-block;
 text-align: center;
-
+bottom:150px;
 }
 #nav ul li{
 text-align: center;
@@ -580,7 +591,7 @@ text-align: center;
 }
 .logo{
   position: fixed;
-  z-index: 2;
+  z-index: 1001;
 }
 #contactWindow{
   width:90vw;
@@ -668,9 +679,7 @@ margin: 0px;
   margin-left:-21%;
   /* margin-right: 6%; */
 }
-#mainWindow{
 
-}
 }
 @media (min-width:768px) and (max-width:991px) {
 body{
@@ -708,11 +717,11 @@ body{
 #nav {
   position:absolute;
   z-index: 1;
-  height: 680px;
+  height: 100%;
   min-height: 100%;
-  background-color:rgba(0,0,0, 0.3);
+  /* background-color:rgba(0,0,0, 0.3); */
   text-align:center;
-  padding-top: 20%;
+  /* padding-top: 20%; */
 }
 #nav ul{
   margin-top: 80%;
