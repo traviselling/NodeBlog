@@ -5,11 +5,19 @@ var upload = multer({ dest: './public/images' })
 var mongo = require('mongodb');
 var db = require('monk')('localhost/scApp');
 
+
 router.get('/', function(req, res, next){
 	res.render('Admin/index',{
-		title:'Admin'
+		title:"Admin | " + req.user.username,
+    username: req.user.username,
+    profileimage: req.user.profileimage,
+    name: req.user.name,
+    email: req.user.email
 	});
 });
+
+
+
 router.get('/add', function(req, res, next){
 	res.render('Admin/addPost',{
 		title:'Add Posts'
@@ -33,7 +41,7 @@ router.post('/add', upload.single('mainimage'), function(req, res, next) {
   if(req.file){
   	var mainimage = req.file.filename
   } else {
-  	var mainimage = 'noimage.jpg';
+  	var mainimage = 'defaultImage.jpg';
   }
 
   	// Form Validation

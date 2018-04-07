@@ -1,5 +1,9 @@
+@import 'nav.css';
 html,body{
   font-family: "Open Sans",sans-serif;
+}
+#mainWindow{
+  padding-left:8%;
 }
 .displayBox{
 
@@ -27,13 +31,14 @@ html,body{
 .displayBoxHeader{
   border-bottom:#f1c37e;
 }
-#mainWindow{
-  padding:20px;
-  text-align:center;
-}
+
 .recentProjectContainer{
   display: inline-block;
+  width:100%;
+  height:100%;
+  margin-left:0%;
 }
+
 .recentProjectContainer h2{
   margin-bottom:40px;
 }

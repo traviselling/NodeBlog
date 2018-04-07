@@ -1,0 +1,39 @@
+extends Adminlayout
+
+block content
+  .logo
+    img(src='../images/LogoGlasses150.png', alt='')
+  // end logo
+  #nav
+    ul
+      li
+        a(href='/') HOME
+      li
+        a(href='/apps') APPS         
+      li
+        a(href='/services') SERVICES                   
+      li
+        a(href='/about') ABOUT                   
+      li
+        a(href='/contact') CONTACT
+      li
+        a(href='/posts') BLOG
+      li
+        a(href='/recentprojects') PROJECTS                   
+  // end nav
+  #mainWindow
+    #loginWindow
+      h2.page-header Login
+      p Please login below
+      if errors
+       each error, i in errors
+        div.alert.alert-danger #{error.msg}
+      form(method='post', action='/users/login')
+       .form-group
+        label Username
+        input.form-control(name='username', type='text', placeholder='Enter Username')
+       .form-group
+        label Password
+        input.form-control(name='password', type='password', placeholder='Enter Password')
+       input.btn.myBtn(type='submit', name='submit',value='Login')
+       a.btn.myBtn(href='/users/register', name='register') REGISTER

@@ -1,0 +1,59 @@
+#myModal{
+  background-color: #4d4d4d;
+  color:#F1c37E;
+  background-image: url("../images/bgHome.png");
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  font-family: "Open Sans",sans-serif;
+  border-radius: 3px;
+}
+.modal-content{
+  background-color: transparent;
+}
+
+.modal-header{
+  border-bottom:2px solid #f1c37e;
+}
+.modal-footer{
+  background-color: rgba(0,0,0,0.1) !important;
+  border-radius:3px;
+  border-top: none;
+  margin-top: 20px;
+}
+input#userName, input#password{
+  border: 1px solid #f1c37e;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.1) !important;
+  font-size:2rem;
+}
+input[type=submit]{
+  margin-bottom: 20px;
+}
+input[type=submit]:hover,.myBtn:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+  color:white;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-image: none !important;
+    color: #f1c37e !important;
+}
+.myBtn{
+  margin-left:10px;
+
+}
+.close{
+  color:white;
+}
+h2{
+  background-color:rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
+/* user agent stylesheet
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    */

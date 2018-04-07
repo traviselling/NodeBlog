@@ -3,8 +3,8 @@ body{
   color:#F1c37E;
 }
 
-.logo img{
-  height:75px;
-  margin-left:20px;
-  margin-top:20px;
+
+#loginWindow{
+  width:50vw;
+  text-align: center;
 }

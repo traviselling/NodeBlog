@@ -4,9 +4,10 @@
 #4D4D4D - darkGrey
 #FF7538 - orange
 */
+
 @import 'nav.css';
 @import 'services.css';
-
+@import 'login.css';
 body ,html{
     width:100%;
     height: 100%;
@@ -55,6 +56,7 @@ h3{
     margin:0;
     padding:0px;
     text-align: center;
+    display:inline-block;
 }
 .welcome{
   font-size:0;
@@ -66,13 +68,21 @@ h3{
     height:100vh;
     min-height: 100vh;
     text-align: center;
-    padding-top: 20%;
+    /* padding-top: 20%; */
+    padding-top:3%;
+}
 
+/* Login window */
+
+#loginWindow,#registerWindow{
+  width:50%;
+  margin:0 auto;
+}
+.page-header{
+  border-bottom:none;
 }
 /*Blog Style*/
-#postWindow{
-  margin-top: -20%;
-}
+
 .posts{
   border:1px solid #f1c37e;
   padding: 2%;
@@ -101,7 +111,7 @@ h3{
 .mainImgPage{
   width:100%;
   height:600px;
-  margin-top: -35%;
+  margin-top:0;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -121,7 +131,7 @@ h3{
   z-index: 1;
   font-size: 5rem;
   left:45%;
-  top:61%;
+  top:86%;
 }
 
 .postPageBody{
@@ -152,7 +162,6 @@ h3{
   font-size: .9rem;
   margin-left: 5px;
   float: left;
-  display:inline-block;
 }
 .postDate{
   font-size: 1rem;
@@ -217,7 +226,7 @@ text-align: center;
 #appWindow, #aboutWindow, #contactWindow, #serviceWindow{
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: -20%;
+
 }
 #contactWindow{
   overflow: hidden;
@@ -256,7 +265,7 @@ text-align: center;
   height: 300px;
   width :300px;
   display: inline-block;
-  
+
   background-image: url("../images/blogApp.png");
   background-position: center;
   background-size: contain;
@@ -388,6 +397,7 @@ color:whitesmoke;
 }
 .single{
   padding-left: 9%;
+
 }
 
 .myBtn{
@@ -454,7 +464,7 @@ p.showCategory{
   margin: 0;
   width: 300px;
   position: relative;
-  top:200px;
+  top:100px;
   font-size: 1.9rem;
 
 }
@@ -463,7 +473,7 @@ p.showCategory{
 }
 .showAuthor{
   position: relative;
-  top:200px;
+  top:95px;
   width:300px;
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -474,7 +484,75 @@ p.showCategory{
   color:#FFF;
 }
 
+.logged{
+  position:absolute;
+  top:80%;
+  left:10%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.logged p{
+  font-style: italic;
+}
+.logged img{
+  height:50px;
+}
 
+
+.userName{
+  font-family: "Alfa Slab One",cursive;
+  font-style: normal;
+  color: whitesmoke;
+}
+
+#profileWindow h3{
+  font-family: "Open Sans Condensed",sans-serif;
+  color:whitesmoke;
+  font-size: 1.7rem;
+}
+#profileWindow img{
+  height:150px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+#profileWindow{
+  margin:0 auto;
+  width:50%;
+  height:50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding:1%;
+  margin-bottom: 3%;
+}
+#mainWindow h2{
+  width:50%;
+  display: inline-block;
+
+}
+.mainTextBlock{
+  padding-top: 15%;
+}
+.adminWindow{
+  padding-top:0;
+}
+#userToolsWindow{
+  width:50%;
+}
+.toolBox{
+  display: inline-block;
+  width:100px;
+  margin-right:10px;
+}
+.toolBox img{
+  height:75px;
+  margin-bottom:10px;
+}
+.toolBox img:hover{
+  height:90px;
+}
+.toolBox a{
+  font-family: 'Alfa Slab One',san-serif;
+  color:whitesmoke;
+  font-size: 1.5rem;
+}
 @media (min-width:320px) and (max-width:767px) {
   body{
     background-image: url("../images/bgHomePortrait@0.5x.png");
@@ -622,7 +700,6 @@ text-align: center;
 .contactMethod img{
   height:25px;
   margin-right:2%;
-  display:inline-block;
   float:right;
 }
 #contactWindow h2{

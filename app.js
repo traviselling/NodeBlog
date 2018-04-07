@@ -5,18 +5,25 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 var multer = require('multer');
 var upload = multer({ dest: 'uploads/' });
+var flash = require('connect-flash');
+var bcrypt = require('bcryptjs');
 var expressValidator = require('express-validator');
 var pug = require('pug');
 
 var nodemailer = require('nodemailer');
 
+var mongoose = require('mongoose');
+var dbAuth = mongoose.connection;
 
 var mongo = require('mongodb');
 var db = require('monk')('127.0.0.1/scApp');
 
 var routes = require('./routes/index');
+
 var posts = require('./routes/posts');
 var categories = require('./routes/categories');
 var apps = require('./routes/apps');
@@ -28,6 +35,7 @@ var blog = require('./routes/blog/blog');
 var admin = require('./routes/Admin/index');
 var textEditor = require('./routes/TextEditor/index');
 var recentProjects = require('./routes/RecentProjects/index');
+var users = require('./routes/Admin/users');
 
 
 var app = express();
@@ -57,6 +65,12 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }));
+
+
+// Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Express Validator
 app.use(expressValidator({
@@ -101,8 +115,10 @@ app.use('/contact',contact);
 app.use('/test', test);
 app.use('/blog', blog);
 app.use('/admin', admin);
+app.use('/users', users);
 app.use('/texteditor',textEditor);
 app.use('/recentprojects', recentProjects);
+
 
 // Node Mailer
 

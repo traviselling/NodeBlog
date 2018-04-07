@@ -29,7 +29,11 @@ block content
       li
         a(href='/posts') BLOG
       li
-        a(href='/recentprojects') PROJECTS                     
+        a(href='/recentprojects') PROJECTS
+      li
+        a(href='#' data-toggle='modal', data-target='#myModal') LOGIN 
+      li
+        a(href='/users') ADMIN                  
   // end nav
   #mainWindow.col-md-12
     .mainTextBlock
@@ -40,3 +44,30 @@ block content
         span.subTitle cat designs
       |                     
       p.info JAVASCRIPT DEVELOPMENT
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h2#myModalLabel.modal-title login
+            |         
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') &times;
+          |       
+          .modal-body
+            form(action='/users/login', method='POST', role='form')
+              .form-group
+                label(for='name') username
+                |
+                input(type='text', id='userName', name='userName', placeholder='')                                         
+                |                                         
+                label(for='password') password
+                |
+                input(type='password', id='password', name='password', placeholder='')
+                |
+          |       
+          .modal-footer
+            input.btn.myBtn(type='submit' name='submit' id='submit' value='submit')
+            | 
+            button.btn.btn-secondary.myBtn.pull-right(type='button', data-dismiss='modal') close
+            |         
+            a.btn.btn-primary.myBtn.pull-right(type='button' href='/users/register') register

@@ -1,20 +1,37 @@
 extends adminLayout
 
 block content
-  
-  .logo
-    img(src='../images/LogoGlasses150.png', alt='')
-  #nav
-    .logged
-      p 
-      | logged in as 
-      span.userName 
-    ul
-      li
-        a(href='/') HOME
-      li
-        a(href='/admin/addproject') ADD PROJ
-      li
-        a(href='/admin/add') ADD POST
-  #mainWindow
-    h2 admin section
+
+	.logo
+		img(src='../images/LogoGlasses150.png', alt='')
+	#nav
+		.logged
+			p.userName  #{username}
+			img(src='../images/' + profileimage)
+			span.userName  
+		ul
+			li
+				a(href='/') HOME
+			li
+				a(href='/admin/addproject') ADD PROJ
+			li
+				a(href='/admin/add') ADD POST
+			li
+				a(href='/users/logout') LOG OUT
+	#mainWindow.adminWindow
+		h2 admin section
+		#profileWindow
+			img.image-responsive(src='../images/' + profileimage)
+			h3.adminName #{name}
+			h4  #{email}
+		#toolWindow
+			.toolBox
+				figure
+					img(src='../images/blogAdminIcon.png')
+				figcaption
+					a(href='/admin/add') add blog
+			.toolBox
+				figure
+					img(src='../images/webDesignAdminIcon.png')
+				figcaption
+					a(href='/admin/addproject') add project 

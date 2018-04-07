@@ -16,6 +16,10 @@ block content
 			li
 				a(href='/admin') ADMIN                   
 	#mainWindow.col-md-12.addForm
+		.logged
+			p
+			| logged in as req.user.name
+			img.image-responsive(src='../images/' + profileimage)
 		#previewWindow.col-md-6
 			h2 preview                     
 		#editorWindow.col-md-6

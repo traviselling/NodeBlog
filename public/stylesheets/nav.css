@@ -4,9 +4,9 @@
     min-height: 100%;
     /*background-color:rgba(255,140,0, 0.5);*/
     background-color:rgba(0,0,0, 0.3);
-    text-align:center;
+    /* text-align:center; */
     padding-top: 170px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     padding-right:30px;
     position: fixed;
     z-index: 1;
@@ -21,14 +21,9 @@
 .logo img {
   width:100px;
 }
-.logged{
-  float:right;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-.userName{
-  font-family: "Alfa Slab One",cursive;
-  letter-spacing: .2rem;
-  margin-left: 1%;
+
+#nav ul{
+  padding-left: 25%;
 }
 
 #nav ul li{
